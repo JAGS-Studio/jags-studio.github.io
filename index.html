@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JAGS Studio</title>
+<meta name="description" content="JAGS Studio makes cute, colorful games for everyone. Play Meltdown Defense on Google Play.">
+<link rel="icon" href="images/studio-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sand: #fff6e6;
+    --card: #ffffff;
+    --ink: #3b2a1f;
+    --soft: #7a6553;
+    --flame: #f26b1d;
+    --flame-dark: #c94f0c;
+    --sea: #2aa3c9;
+    --line: #f0dfc6;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--sand);
+    color: var(--ink);
+    font: 17px/1.6 "Nunito", system-ui, sans-serif;
+  }
+  a { color: var(--flame-dark); }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+
+  header {
+    position: relative;
+    min-height: 340px;
+    display: flex;
+    align-items: flex-end;
+    background: #2b1d14 url("images/header.jpg") center / cover no-repeat;
+  }
+  header::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 35%, rgba(30,18,10,.75));
+  }
+  .brand {
+    position: relative; z-index: 1;
+    display: flex; align-items: center; gap: 18px;
+    padding: 28px 0;
+  }
+  .brand img { width: 88px; height: 88px; border-radius: 22px; box-shadow: 0 6px 18px rgba(0,0,0,.35); }
+  .brand h1 {
+    margin: 0;
+    font: 48px/1 "Lilita One", sans-serif;
+    color: #fff;
+    text-shadow: 0 3px 0 rgba(0,0,0,.35);
+  }
+  .brand p { margin: 6px 0 0; color: #ffe9cc; font-weight: 700; }
+
+  section { padding: 40px 0 8px; }
+  h2 { font: 30px/1.2 "Lilita One", sans-serif; margin: 0 0 16px; color: var(--flame-dark); }
+
+  .game {
+    background: var(--card);
+    border: 2px solid var(--line);
+    border-radius: 24px;
+    padding: 24px;
+    box-shadow: 0 6px 0 var(--line);
+  }
+  .game-top { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+  .game-top img { width: 96px; height: 96px; border-radius: 22px; }
+  .game-top h3 { margin: 0; font: 28px/1.1 "Lilita One", sans-serif; }
+  .game-top p { margin: 4px 0 0; color: var(--soft); }
+  .play {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 12px 24px;
+    border-radius: 999px;
+    background: var(--flame);
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 4px 0 var(--flame-dark);
+  }
+  .play:hover { background: var(--flame-dark); }
+  .shots {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-top: 22px;
+  }
+  .shots img { width: 100%; border-radius: 14px; display: block; }
+  @media (max-width: 640px) {
+    .shots { grid-template-columns: repeat(2, 1fr); }
+    .brand h1 { font-size: 38px; }
+    .brand img { width: 68px; height: 68px; }
+    header { min-height: 260px; }
+  }
+
+  ul.links { list-style: none; padding: 0; margin: 0; }
+  ul.links li { margin: 6px 0; }
+
+  footer {
+    margin-top: 40px;
+    padding: 24px 0 32px;
+    border-top: 2px solid var(--line);
+    color: var(--soft);
+    font-size: 14px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap brand">
+    <img src="images/studio-icon.png" alt="JAGS Studio logo">
+    <div>
+      <h1>JAGS Studio</h1>
+      <p>Cute, colorful games for everyone, made by a solo indie developer.</p>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section>
+    <h2>Our games</h2>
+    <div class="game">
+      <div class="game-top">
+        <img src="images/meltdown-icon.png" alt="Meltdown Defense icon">
+        <div>
+          <h3>Meltdown Defense</h3>
+          <p>Defend your beach hut from ice critters with tiki torches, lava and sunshine!</p>
+        </div>
+      </div>
+      <p>Build fire towers along the path, melt every snowman, frost wisp and ice golem, and set off chain reactions
+        across the whole wave. Free to play, offline, no account needed, with optional rewarded ads only.
+        In English, Spanish, Portuguese, French, German and Italian.</p>
+      <a class="play" href="https://play.google.com/store/apps/details?id=com.jogs.meltdowndefense">Get it on Google Play</a>
+      <div class="shots">
+        <img src="images/battle_closeup.jpg" alt="Fire towers melting ice critters on the beach" loading="lazy">
+        <img src="images/boss_entrance.jpg" alt="A boss critter approaches" loading="lazy">
+        <img src="images/crab_bonus.jpg" alt="The crab offers a bonus" loading="lazy">
+        <img src="images/card_pick.jpg" alt="Picking a card after a wave" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contact and privacy</h2>
+    <ul class="links">
+      <li>Support: <a href="mailto:jaadev38@gmail.com">jaadev38@gmail.com</a></li>
+      <li><a href="https://sites.google.com/view/meltdown-defense-privacy-polic/">Meltdown Defense privacy policy</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="wrap">
+  © 2026 JAGS Studio. The header art and the game icon were made with AI image tools; the screenshots show the real game.
+  Google Play and the Google Play logo are trademarks of Google LLC.
+</footer>
+
+</body>
+</html>
